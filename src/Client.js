@@ -11,7 +11,7 @@ axios.defaults.headers[ 'Referer' ]       = 'https://espaceclient.edfenr.com/';
 axios.defaults.headers[ 'Accept' ]        = 'application/json, text/plain, */*';
 axios.defaults.headers[ 'Origin' ]        = 'https://espaceclient.edfenr.com';
 
-export default class APIAccess {
+export default class Client {
   constructor( email, password ) {
     this.email    = email,
     this.password = password;
