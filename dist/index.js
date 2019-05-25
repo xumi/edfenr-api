@@ -10,6 +10,6 @@ Object.defineProperty(exports, "Client", {
   }
 });
 
-var _Client = _interopRequireDefault(require("./src/Client"));
+var _Client = _interopRequireDefault(require("./Client"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }

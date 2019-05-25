@@ -1,4 +1,4 @@
-import Client from './src/Client';
+import Client from './Client';
 
 export {
   Client,
