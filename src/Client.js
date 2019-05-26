@@ -2,7 +2,8 @@ import dateFns        from 'date-fns';
 import axios          from 'axios';
 import { stringify }  from 'qs';
 
-const DATE_FORMAT = 'MM-DD-YYYY';
+const EDF_DATE_FORMAT = 'MM-DD-YYYY';
+const OUTPUT_DATE_FORMAT = 'DD-MM-YYYY';
 const WIDGET_ID   = 1224;
 
 axios.defaults.baseURL                    = 'https://apiws-espaceclient.edfenr.com';
@@ -53,8 +54,8 @@ export default class Client {
     const token = await this.getAuthorization();
     const result = await axios.get( '/api/Dashboard/GetGraphWidget', {
       params: {
-        startDate: dateFns.format( startDate, DATE_FORMAT ),
-        endDate:   dateFns.format( endDate, DATE_FORMAT ),
+        startDate: dateFns.format( startDate, EDF_DATE_FORMAT ),
+        endDate:   dateFns.format( endDate, EDF_DATE_FORMAT ),
         pvId,
         type:      1,
         widgetId:  WIDGET_ID,
@@ -65,8 +66,8 @@ export default class Client {
     } );
 
     return {
-      day:   startDate,
-      stats: result.data.Data.ElecEnergies,
+      day:   dateFns.format( startDate, OUTPUT_DATE_FORMAT ),
+      hours: result.data.Data.ElecEnergies,
     };
   }
 
