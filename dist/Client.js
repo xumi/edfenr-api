@@ -166,7 +166,10 @@ function () {
 
               case 8:
                 result = _context3.sent;
-                return _context3.abrupt("return", result.data.Data.ElecEnergies);
+                return _context3.abrupt("return", {
+                  day: startDate,
+                  stats: result.data.Data.ElecEnergies
+                });
 
               case 10:
               case "end":

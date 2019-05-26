@@ -64,7 +64,10 @@ export default class Client {
       },
     } );
 
-    return result.data.Data.ElecEnergies;
+    return {
+      day:   startDate,
+      stats: result.data.Data.ElecEnergies,
+    };
   }
 
   getDailyStatsFromDaysAgo( distance ) {
