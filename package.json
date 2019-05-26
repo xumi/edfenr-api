@@ -2,7 +2,7 @@
   "author": "Maxime Zielony",
   "name": "edfenr-api",
   "description": "API Wrapper for EDF ENR data about your network consumption and solar production",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/xumi/edfenr-api.git"
