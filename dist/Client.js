@@ -24,7 +24,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 var EDF_DATE_FORMAT = 'MM-DD-YYYY';
-var OUTPUT_DATE_FORMAT = 'DD-MM-YYYY';
+var OUTPUT_DATE_FORMAT = 'YYYY-MM-DD';
 var WIDGET_ID = 1224;
 _axios["default"].defaults.baseURL = 'https://apiws-espaceclient.edfenr.com';
 _axios["default"].defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded';

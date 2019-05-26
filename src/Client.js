@@ -3,7 +3,7 @@ import axios          from 'axios';
 import { stringify }  from 'qs';
 
 const EDF_DATE_FORMAT = 'MM-DD-YYYY';
-const OUTPUT_DATE_FORMAT = 'DD-MM-YYYY';
+const OUTPUT_DATE_FORMAT = 'YYYY-MM-DD';
 const WIDGET_ID   = 1224;
 
 axios.defaults.baseURL                    = 'https://apiws-espaceclient.edfenr.com';
